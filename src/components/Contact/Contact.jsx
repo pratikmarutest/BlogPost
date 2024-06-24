@@ -43,7 +43,6 @@ const Contact = () => {
       .then((res) => {
         setQueries(res);
       });
-    console.log("Queries count ", queries.length);
   };
 
   useEffect(() => {
@@ -77,7 +76,7 @@ const Contact = () => {
             />
             <div className="sm:col-span-2">
               <label
-                for="message"
+                htmlFor="message"
                 className="block mb-2 text-sm font-medium text-gray-900 text-white"
               >
                 Your message

@@ -23,7 +23,9 @@ function Home() {
 
   useEffect(() => {
     appwriteService.getCategories().then((result) => {
-      setCategories(["All", ...result]);
+      if (result) {
+        setCategories(["All", ...result]);
+      }
     });
   }, []);
 

@@ -144,7 +144,7 @@ const FAQs = () => {
                   <h2 id={`accordion-collapse-heading-${faq.$id}`}>
                     <div
                       type="button"
-                      className={`flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border ${openFaqId === faq.$id ? "border-b-0 rounded-t-lg" : "rounded-lg"} border-gray-200 bg-white bg-opacity-50 backdrop-blur-sm dark:bg-gray-600 dark:border-white dark:text-white hover:bg-opacity-75 transition-colors duration-300 cursor-pointer}`}
+                      className={`flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border ${openFaqId === faq.$id ? "border-b-0 rounded-t-lg" : "rounded-lg"} border-gray-200 bg-white bg-opacity-50 backdrop-blur-sm bg-gray-600 border-white text-white hover:bg-opacity-75 transition-colors duration-300 cursor-pointer}`}
                       data-accordion-target={`#accordion-collapse-body-${faq.$id}`}
                       aria-expanded="false"
                       aria-controls={`accordion-collapse-body-${faq.$id}`}
@@ -173,9 +173,9 @@ const FAQs = () => {
                       >
                         <path
                           stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
                           d="M9 5 5 1 1 5"
                         />
                       </svg>
@@ -187,8 +187,8 @@ const FAQs = () => {
                     aria-labelledby={`accordion-collapse-heading-${faq.$id}`}
                   >
                     <div className="p-5 border border-t-0 rounded-b-lg border-white flex">
-                      <p className="mb-2 ml-2 dark:text-blue-300">&gt;</p>
-                      <p className="mb-2 ml-2 dark:text-white">
+                      <p className="mb-2 ml-2 text-blue-300">&gt;</p>
+                      <p className="mb-2 ml-2 text-white">
                         {faq.description}
                       </p>
                     </div>

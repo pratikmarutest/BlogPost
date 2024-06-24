@@ -124,7 +124,7 @@ const PostForm = ({ post }) => {
             <Input
               label={postFormText.slug}
               placeholder={postFormText.slugPlaceholder}
-              disabled="true"
+              disabled={true}
               className="mb-4"
               {...register("slug", { required: true })}
               onInput={(e) => {

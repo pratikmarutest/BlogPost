@@ -29,14 +29,12 @@ const Protected = ({
   useEffect(() => {
     async function checkAdmin() {
       try {
-        if (userData) {
-          const id = await userData.$id;
-          const res = await appwriteService.checkAddAccess(id);
-          if (admin && res) {
-            navigate(path);
-          } else {
-            navigate("/");
-          }
+        const id = await userData.$id;
+        const res = await appwriteService.checkAddAccess(id);
+        if (admin && res) {
+          navigate(path);
+        } else {
+          navigate("/");
         }
       } catch (error) {
         console.error(error);
