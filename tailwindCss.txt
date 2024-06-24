@@ -1,0 +1,33 @@
+-- Best practices need to be followed while designing webpage in Tailwind CSS 
+
+1. Always start developing screen for small devices and then override larger screens 
+2. Always try to use tailwind css classes . Avoid square notations (For eg:- mx-[20px])
+3. Always use @apply directive in a proper way. Code with Harry Tailwind CSS tutorial video 09. 
+4. Always use @layer directive in a proper way. Code with Harry Tailwind CSS tutorial video 09. 
+5. Command to create conf file in tailwind css :- _> npx tailwindcss init confHarry --full
+6. If we edit some values inside newly created "confHarry" and wants to apply those classes in code then update tailwind.config.js 
+
+Tailwind.config.js (See extend object)
+
+````
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      spacing: {
+        13: "3.2rem",
+      },
+      colors: {
+        compPurple: "#740322",
+      },
+    },
+  },
+  plugins: [],
+};
+
+
+````
+7. Command to convert application to production build :- npm run build
+8. To find favicon of any website we can give url and then enter /favicon.ico in site. For eg :- "https://facebook.com/favicon.ico"

@@ -1,0 +1,11 @@
+App Name :- Blog App
+
+1. TechStack
+  a. AppWrite :- For Backend
+  b. TinyMCE :- For text Editor 
+  c. html-react-parser - (npm package) to parse html 
+  d. React Hook Form - for creating forms
+
+2. Packages installation :- 
+  a. Basic :- npm install @reduxjs/toolkit react-redux react-router-dom
+  b. Advanced :- npm install appwrite @tinymce/tinymce-react html-react-parser react-hook-form
