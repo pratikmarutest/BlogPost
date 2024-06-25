@@ -19,7 +19,5 @@ App Name :- Blog App
   Link :- https://readme.so/editor
 
 5. Git and Github video & docs:- 
-        Docs :- https://docs.chaicode.com/git-and-github/
-        Video :- https://www.youtube.com/watch?v=q8EevlEpQ2A
-
-
+        Docs:- https://docs.chaicode.com/git-and-github/
+        Video:- https://www.youtube.com/watch?v=q8EevlEpQ2A
