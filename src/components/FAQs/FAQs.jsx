@@ -144,7 +144,7 @@ const FAQs = () => {
                   <h2 id={`accordion-collapse-heading-${faq.$id}`}>
                     <div
                       type="button"
-                      className={`flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border ${openFaqId === faq.$id ? "border-b-0 rounded-t-lg" : "rounded-lg"} border-gray-200 bg-white bg-opacity-50 backdrop-blur-sm bg-gray-600 border-white text-white hover:bg-opacity-75 transition-colors duration-300 cursor-pointer}`}
+                      className={`flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border ${openFaqId === faq.$id ? "border-b-0 rounded-t-lg" : "rounded-lg"} border-gray-200 bg-white bg-opacity-20 backdrop-blur-sm bg-gray-600 border-white text-white hover:bg-opacity-40 transition-colors duration-300 cursor-pointer}`}
                       data-accordion-target={`#accordion-collapse-body-${faq.$id}`}
                       aria-expanded="false"
                       aria-controls={`accordion-collapse-body-${faq.$id}`}
