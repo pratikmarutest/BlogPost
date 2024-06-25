@@ -14,3 +14,9 @@ App Name :- Blog App
   -> git remote add origin https://github.com/pratikmarutest/BlogPost.git
   -> git branch -M main
   -> git push -u origin main
+
+4. Tool used to create readme.md 
+  Link :- https://readme.so/editor
+
+5. Git and Github docs :- https://docs.chaicode.com/git-and-github/
+
