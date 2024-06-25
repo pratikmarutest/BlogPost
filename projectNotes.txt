@@ -9,3 +9,8 @@ App Name :- Blog App
 2. Packages installation :- 
   a. Basic :- npm install @reduxjs/toolkit react-redux react-router-dom
   b. Advanced :- npm install appwrite @tinymce/tinymce-react html-react-parser react-hook-form
+
+3. Github code push 
+  -> git remote add origin https://github.com/pratikmarutest/BlogPost.git
+  -> git branch -M main
+  -> git push -u origin main
