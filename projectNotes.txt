@@ -18,6 +18,6 @@ App Name :- Blog App
 4. Tool used to create readme.md 
   Link :- https://readme.so/editor
 
-5. Git and Github docs:- https://docs.chaicode.com/git-and-github/
-
-
+5. Git and Github video & docs:- 
+        Docs:- https://docs.chaicode.com/git-and-github/
+        Video:- https://www.youtube.com/watch?v=q8EevlEpQ2A
