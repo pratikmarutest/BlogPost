@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import appwriteService from "../appwrite/config";
-import { Container, Loader, PostCard } from "../components/index";
+import { Container, PostCard, ShimmerLoader } from "../components/index";
 import { useSelector } from "react-redux";
 import { Login } from "../components/index";
 
@@ -9,6 +9,7 @@ function Home() {
   const [categories, setCategories] = useState(["All"]);
   const [categorySelected, setCategorySelected] = useState("Survey");
   const authStatus = useSelector((state) => state.auth.status);
+  const tempArr = [1, 2, 3, 4, 5, 6, 7, 8]; // For Shimmer UI.
 
   useEffect(() => {
     appwriteService.getPosts().then((posts) => {
@@ -32,14 +33,25 @@ function Home() {
   if (posts.length === 0) {
     if (authStatus) {
       return (
-        <div className="w-full py-8 mt-4 text-center">
+        <div className="w-full py-8">
           <Container>
-            <div className="flex flex-wrap">
-              <div className="p-2 w-full">
-                <h1 className="text-2xl font-bold hover:text-gray-500">
-                  <Loader />
-                </h1>
-              </div>
+            <div className="flex overflow-x-auto mb-2">
+              {tempArr.map((ele) => {
+                return (
+                  <div key={ele}>
+                    <ShimmerLoader type="category" />
+                  </div>
+                );
+              })}
+            </div>
+            <div className="md:flex flex-wrap">
+              {tempArr.map((ele) => {
+                return (
+                  <div key={ele} className="p-2 mt-2 sm:w-full md:w-1/4">
+                    <ShimmerLoader />
+                  </div>
+                );
+              })}
             </div>
           </Container>
         </div>

@@ -22,6 +22,7 @@ import Messages from "./Contact/Messages";
 import ViewMessage from "./Contact/ViewMessage";
 import DeleteAlert from "./Contact/DeleteAlert";
 import ViewingWarning from "../common/commonComponents/ViewingWarning";
+import ShimmerLoader from "./ShimmerLoader/ShimmerLoader";
 
 export {
   Header,
@@ -48,4 +49,5 @@ export {
   ViewMessage,
   DeleteAlert,
   ViewingWarning,
+  ShimmerLoader,
 };
