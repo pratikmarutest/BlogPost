@@ -6,6 +6,7 @@ import {
   Input,
   SnackBar,
   DeleteAlert,
+  ShimmerLoader,
 } from "../index";
 import appwriteService from "../../appwrite/config";
 import { useSelector } from "react-redux";
@@ -24,6 +25,7 @@ const FAQs = () => {
   const [deleteAlert, setDeleteAlert] = useState(false);
   const [deletePostId, setDeletePostId] = useState("");
   const [openFaqId, setOpenFaqId] = useState(null);
+  const shimmerArr = [1, 2, 3, 4, 5, 6, 7, 8];
 
   const handleAddFAQ = () => {
     appwriteService.getFAQs().then((res) => {
@@ -99,6 +101,27 @@ const FAQs = () => {
     }
   };
 
+  if (!faqs) {
+    return (
+      <Container>
+        <div className="md:flex md:justify-center">
+          <div className="bg-blue-400 bg-opacity-60 text-white text-center mx-4 my-5 rounded-lg py-2 font-semibold md:text-lg md:w-1/2">
+            {faqsText.faqs}
+          </div>
+        </div>
+        <div>
+          {shimmerArr.map((shimmer) => {
+            return (
+              <div key={shimmer}>
+                <ShimmerLoader type="faq" />
+              </div>
+            );
+          })}
+        </div>
+      </Container>
+    );
+  }
+
   return (
     <Container>
       <FAQsEditor
@@ -112,7 +135,6 @@ const FAQs = () => {
           {faqsText.faqs}
         </div>
       </div>
-
       {faqs &&
         faqs.map((faq) => {
           return (
@@ -188,9 +210,7 @@ const FAQs = () => {
                   >
                     <div className="p-5 border border-t-0 rounded-b-lg border-white flex">
                       <p className="mb-2 ml-2 text-blue-300">&gt;</p>
-                      <p className="mb-2 ml-2 text-white">
-                        {faq.description}
-                      </p>
+                      <p className="mb-2 ml-2 text-white">{faq.description}</p>
                     </div>
                   </div>
                 </div>

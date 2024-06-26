@@ -77,20 +77,13 @@ const Header = () => {
       .checkAddAccess()
       .then(() => appwriteService.getQueries())
       .then((res) => {
-        if (res) {
-          res.reverse();
-        }
-      })
-      .then((res) => {
-        if (res) {
-          const total = res.filter((query) => {
-            if (query.resolved === "Resolved") {
-              return query.resolved === true;
-            }
-            return query.resolved === false;
-          }).length;
-          setMessageCount(total);
-        }
+        const total = res.filter((query) => {
+          if (query.resolved === "Resolved") {
+            return query.resolved === true;
+          }
+          return query.resolved === false;
+        }).length;
+        setMessageCount(total);
       });
   };
 

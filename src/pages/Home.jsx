@@ -9,7 +9,7 @@ function Home() {
   const [categories, setCategories] = useState(["All"]);
   const [categorySelected, setCategorySelected] = useState("Survey");
   const authStatus = useSelector((state) => state.auth.status);
-  const tempArr = [1, 2, 3, 4, 5, 6, 7, 8]; // For Shimmer UI.
+  const shimmerArr = [1, 2, 3, 4, 5, 6, 7, 8];
 
   useEffect(() => {
     appwriteService.getPosts().then((posts) => {
@@ -36,7 +36,7 @@ function Home() {
         <div className="w-full py-8">
           <Container>
             <div className="flex overflow-x-auto mb-2">
-              {tempArr.map((ele) => {
+              {shimmerArr.map((ele) => {
                 return (
                   <div key={ele}>
                     <ShimmerLoader type="category" />
@@ -45,10 +45,10 @@ function Home() {
               })}
             </div>
             <div className="md:flex flex-wrap">
-              {tempArr.map((ele) => {
+              {shimmerArr.map((ele) => {
                 return (
                   <div key={ele} className="p-2 mt-2 sm:w-full md:w-1/4">
-                    <ShimmerLoader />
+                    <ShimmerLoader type="post" />
                   </div>
                 );
               })}

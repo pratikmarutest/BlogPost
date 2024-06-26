@@ -1,15 +1,10 @@
 import React, { useState, useEffect } from "react";
 import appwriteService from "../appwrite/config";
-import {
-  Container,
-  Loader,
-  PostCard,
-  ShimmerLoader,
-} from "../components/index";
+import { Container, PostCard, ShimmerLoader } from "../components/index";
 
 function AllPosts() {
   const [posts, setPosts] = useState([]);
-  const tempArr = [1, 2, 3, 4, 5, 6, 7, 8]; // For Shimmer UI.
+  const shimmerArr = [1, 2, 3, 4, 5, 6, 7, 8];
 
   useEffect(() => {
     appwriteService.getPosts([]).then((posts) => {
@@ -27,10 +22,10 @@ function AllPosts() {
       <div className="w-full py-8">
         <Container>
           <div className="md:flex flex-wrap">
-            {tempArr.map((ele) => {
+            {shimmerArr.map((ele) => {
               return (
                 <div key={ele} className="p-2 mt-2 sm:w-full md:w-1/4">
-                  <ShimmerLoader />
+                  <ShimmerLoader type="post" />
                 </div>
               );
             })}
