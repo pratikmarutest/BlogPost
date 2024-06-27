@@ -39,6 +39,11 @@ export default function App() {
       <Footer />
     </div>
   ) : (
-    <Loader />
+    <div className="bg-gray-800 min-h-screen flex items-center justify-center">
+      <div className="relative w-20 h-20">
+        <div className="absolute bg-gradient-to-r from-blue-500 to-blue-800 rounded-full w-16 h-16 animate-spin" />
+        {/* <div className="absolute bg-gradient-to-r from-blue-400 to-purple-200 rounded-full w-12 h-12 animate-pulse" /> */}
+      </div>
+    </div>
   );
 }
