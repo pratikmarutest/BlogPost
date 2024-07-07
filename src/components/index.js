@@ -23,6 +23,7 @@ import ViewMessage from "./Contact/ViewMessage";
 import DeleteAlert from "./Contact/DeleteAlert";
 import ViewingWarning from "../common/commonComponents/ViewingWarning";
 import ShimmerLoader from "./ShimmerLoader/ShimmerLoader";
+import ShareButton from "../common/commonComponents/ShareButton";
 
 export {
   Header,
@@ -50,4 +51,5 @@ export {
   DeleteAlert,
   ViewingWarning,
   ShimmerLoader,
+  ShareButton,
 };

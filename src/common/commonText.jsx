@@ -133,4 +133,8 @@ export const socialMediaLink = {
   instagramLink: "https://www.google3.com",
 };
 
+export const shareButtonText = {
+  shareTitle: `Hello from ${common.orgName}`,
+  shareText: `Greetings from ${common.orgName} 😊, I hope you’re having beautiful day! Check out this link to learn about how to earn money or grab benefits out there in market: `,
+};
 export default common;

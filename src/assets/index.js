@@ -7,6 +7,8 @@ import expandIcon from "./expandIcon.svg";
 import telegramIcon from "./telegramIcon.svg";
 import whatsappIcon from "./whatsappIcon.svg";
 import instagramIcon from "./instagramIcon.svg";
+import editIcon from "./editIcon.svg";
+import shareIcon from "./shareIcon.svg";
 
 export {
   orgLogo,
@@ -18,4 +20,6 @@ export {
   telegramIcon,
   whatsappIcon,
   instagramIcon,
+  editIcon,
+  shareIcon,
 };

@@ -7,10 +7,12 @@ import {
   Loader,
   DeleteAlert,
   BackButton,
+  ShareButton,
 } from "../components/index";
 import parse from "html-react-parser";
 import { useSelector } from "react-redux";
-import common, { postText } from "../common/commonText";
+import { postText } from "../common/commonText";
+import { deleteIcon, editIcon } from "../assets/index";
 
 export default function Post() {
   const [post, setPost] = useState(null);
@@ -87,18 +89,25 @@ export default function Post() {
         <div className="sticky bottom-0 left-0 w-full bg-[#0f172a] rounded-t-lg p-4 shadow-md">
           <div className="flex justify-end">
             {isAuthor && (
-              <div className="ml-4">
+              <div className="ml-4 flex items-center">
                 <Link to={`/edit-post/${post.$id}`}>
-                  <Button bgColor="bg-green-500">{common.edit}</Button>
+                  <Button bgColor="bg-green-500">
+                    <img src={editIcon} alt="Edit Icon" />
+                  </Button>
                 </Link>
                 <Button
                   bgColor="bg-red-500"
                   onClick={() => setDeleteAlert(true)}
                 >
-                  {loading ? <Loader /> : common.delete}
+                  {loading ? (
+                    <Loader />
+                  ) : (
+                    <img src={deleteIcon} alt="Delete Icon" />
+                  )}
                 </Button>
               </div>
             )}
+            <ShareButton url={window.location.href} />
             <Link to={parse(post.siteLink)}>
               <Button>{postText.siteLink}</Button>
             </Link>
