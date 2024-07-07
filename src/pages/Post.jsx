@@ -8,6 +8,7 @@ import {
   DeleteAlert,
   BackButton,
   ShareButton,
+  ShimmerLoader,
 } from "../components/index";
 import parse from "html-react-parser";
 import { useSelector } from "react-redux";
@@ -122,6 +123,6 @@ export default function Post() {
       </Container>
     </div>
   ) : (
-    <Loader />
+    <ShimmerLoader type="postInfo" />
   );
 }
