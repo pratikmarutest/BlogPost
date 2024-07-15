@@ -13,4 +13,8 @@ RewriteOptions inherit
 
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www.earnquest.in/
+<<<<<<< HEAD
 RewriteRule (.*) https://earnquest.in/$1 [R=301,L]
+=======
+RewriteRule (.*) https://earnquest.in/$1 [R=301,L]
+>>>>>>> 58156459b59826cd7ed4487667ec302435cd8fc8
