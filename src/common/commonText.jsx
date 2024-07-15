@@ -1,5 +1,5 @@
 export const common = {
-  orgName: "CompanyName",
+  orgName: "Company",
   headline: "Headline 1",
   logout: "Logout",
   login: "Login",
