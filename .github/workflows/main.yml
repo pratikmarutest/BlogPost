@@ -8,13 +8,14 @@ jobs:
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
-    steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v3
 
     env: 
       VITE_APPWRITE_URL: ${{ secrets.VITE_APPWRITE_URL }}
       VITE_APPWRITE_PROJECT_ID: ${{ secrets.VITE_APPWRITE_PROJECT_ID }}
+      
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
       
     - name: Use Node.js 20
       uses: actions/setup-node@v2
