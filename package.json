@@ -2,7 +2,6 @@
   "name": "BlogWebsite",
   "homepage": "./",
   "version": "1.0.0",
-  "homepage": "./",
   "type": "module",
   "description": "React TypeScript on Replit, using Vite bundler",
   "scripts": {
