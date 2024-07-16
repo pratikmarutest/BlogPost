@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import appwriteService from "../appwrite/config";
 import { Container, PostCard, ShimmerLoader } from "../components/index";
 import { useSelector } from "react-redux";
-import { Login } from "../components/index";
+import { HeroSection } from "../components/index";
 
 function Home() {
   const [posts, setPosts] = useState([]);
@@ -60,7 +60,7 @@ function Home() {
     return (
       <div className="">
         <Container>
-          <Login />
+          <HeroSection />
         </Container>
       </div>
     );

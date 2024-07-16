@@ -1,5 +1,5 @@
 export const common = {
-  orgName: "Company",
+  orgName: "EarnQuest",
   headline: "Headline 1",
   logout: "Logout",
   login: "Login",
@@ -115,7 +115,7 @@ export const footerText = {
 };
 
 export const loginText = {
-  signIn: "Sign In ",
+  signIn: "Log In ",
   signUp: "Don't have any account? ",
 };
 
@@ -137,4 +137,19 @@ export const shareButtonText = {
   shareTitle: `Hello from ${common.orgName}`,
   shareText: `Greetings from ${common.orgName} 😊, I hope you’re having beautiful day! Check out this link to learn about how to earn money or grab benefits out there in market: `,
 };
+
+export const heroMainText = {
+  mainHeading: "Discover new earning opportunities and best offers.",
+  description: `Here at ${common.orgName} we focus on listing best earning opportunities and
+        offers. So that you never get short on cash. You'll always have some
+        pocket money to spend and save money with offers.`,
+  anyQuestions: "Any Questions ?",
+  anyQuestionDescription: "Always ready to help",
+};
+
+export const reviewText = {
+  reviewHeading: "What our users say",
+  userStatus: `User of "${common.orgName}"`,
+};
+
 export default common;

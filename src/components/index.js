@@ -24,6 +24,10 @@ import DeleteAlert from "./Contact/DeleteAlert";
 import ViewingWarning from "../common/commonComponents/ViewingWarning";
 import ShimmerLoader from "./ShimmerLoader/ShimmerLoader";
 import ShareButton from "../common/commonComponents/ShareButton";
+import HeroSection from "../pages/HeroSection";
+import HeroMain from "../components/HeroMain/HeroMain";
+import Review from "../components/Review/Review";
+import HeroTimeline from "../components/HeroTimeline/HeroTimeline";
 
 export {
   Header,
@@ -52,4 +56,8 @@ export {
   ViewingWarning,
   ShimmerLoader,
   ShareButton,
+  HeroSection,
+  HeroMain,
+  Review,
+  HeroTimeline,
 };
