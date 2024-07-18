@@ -57,10 +57,10 @@ const Contact = () => {
 
       <section className="px-5">
         <div className="py-2 lg:py-4 px-4 mx-auto max-w-screen-md">
-          <h2 className="mb-2 text-4xl tracking-tight font-bold text-center text-gray-900 dark:text-white">
+          <h2 className="mb-2 text-4xl tracking-tight font-bold text-center text-white">
             {contactText.heading}
           </h2>
-          <p className="mb-4 lg:mb-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">
+          <p className="mb-4 lg:mb-8 font-light text-center text-gray-400 sm:text-xl">
             {contactText.description}
           </p>
           <form onSubmit={handleSubmit(messageSubmit)} className="space-y-8">

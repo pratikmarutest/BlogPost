@@ -24,16 +24,16 @@ const Review = () => {
       <div className="relative my-4">
         <figure className="max-w-screen-md mx-auto text-center bg-white bg-opacity-10 p-3 md:p-4 rounded-xl mt-3">
           <blockquote>
-            <p className="text-lg italic font-medium text-gray-900 dark:text-white">
+            <p className="text-lg italic font-medium text-white">
               {reviewArray[currentIndex].userReview}
             </p>
           </blockquote>
           <figcaption className="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
-            <div className="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-800 dark:divide-gray-400">
-              <cite className="pe-3 font-medium text-gray-900 dark:text-blue-300">
+            <div className="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-400">
+              <cite className="pe-3 font-medium text-blue-300">
                 {reviewArray[currentIndex].userName}
               </cite>
-              <cite className="ps-3 text-sm text-gray-500 dark:text-gray-400">
+              <cite className="ps-3 text-sm text-gray-400">
                 {reviewText.userStatus}
               </cite>
             </div>

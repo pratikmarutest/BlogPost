@@ -4,16 +4,16 @@ import common, { heroMainText } from "../../common/commonText";
 const HeroMain = () => {
   return (
     <div className="text-center">
-      <h1 class="mb-4 text-3xl font-bold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white mt-12 text-center">
+      <h1 class="mb-4 text-3xl font-bold tracking-tight leading-none md:text-5xl lg:text-6xl text-white mt-12 text-center">
         {heroMainText.mainHeading}
       </h1>
-      <p class="mb-8 text-sm font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400 text-center">
+      <p class="mb-8 text-sm font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 text-gray-400 text-center">
         {heroMainText.description}
       </p>
       <div class="flex flex-col mb-8 lg:mb-12 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
         <Link
           to="/signup"
-          class="inline-flex justify-center items-center py-2 md:py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
+          class="inline-flex justify-center items-center py-2 md:py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-primary-900"
         >
           {common.signup}
           <svg
@@ -31,7 +31,7 @@ const HeroMain = () => {
         </Link>
         <Link
           to="/login"
-          class="inline-flex justify-center items-center py-2 md:py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 bg-white bg-opacity-10"
+          class="inline-flex justify-center items-center py-2 md:py-3 px-5 text-base font-medium text-center rounded-lg border hover:bg-gray-100 focus:ring-4 text-white border-gray-700 hover:bg-gray-700 focus:ring-gray-800 bg-white bg-opacity-10"
         >
           {common.login}
         </Link>
@@ -39,7 +39,7 @@ const HeroMain = () => {
 
       <Link
         to="/contact"
-        class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-24 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
+        class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-24 text-sm  rounded-full bg-gray-800 text-white hover:bg-gray-700"
         role="alert"
       >
         <span class="text-xs bg-blue-600 rounded-full text-white px-4 py-1.5 mr-3">
