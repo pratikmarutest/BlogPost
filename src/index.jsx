@@ -4,7 +4,7 @@ import App from "./App";
 import { Provider } from "react-redux";
 import store from "./store/store";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { Protected, Login } from "./components";
+import { Protected, Login, ForgotPwd } from "./components";
 import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import AllPosts from "./pages/AllPosts";
@@ -28,6 +28,14 @@ const router = createBrowserRouter([
 				element: (
 					<Protected authentication={false}>
 						<Login />
+					</Protected>
+				),
+			},
+			{
+				path: "/forgot-password",
+				element: (
+					<Protected authentication={false}>
+						<ForgotPwd />
 					</Protected>
 				),
 			},

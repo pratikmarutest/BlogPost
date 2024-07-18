@@ -28,6 +28,7 @@ import HeroSection from "../pages/HeroSection";
 import HeroMain from "../components/HeroMain/HeroMain";
 import Review from "../components/Review/Review";
 import HeroTimeline from "../components/HeroTimeline/HeroTimeline";
+import ForgotPwd from "./ForgotPwd/ForgotPwd";
 
 export {
   Header,
@@ -60,4 +61,5 @@ export {
   HeroMain,
   Review,
   HeroTimeline,
+  ForgotPwd,
 };

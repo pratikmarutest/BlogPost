@@ -76,6 +76,14 @@ function Login() {
             {common.signup}
           </Link>
         </div>
+        <div className="text-center text-base mt-3">
+          <Link
+            to="/forgot-password"
+            className="font-medium text-blue-400 text-md text-primary transition-all duration-200 hover:underline"
+          >
+            {loginText.forgotPwd}
+          </Link>
+        </div>
       </div>
     </div>
   );

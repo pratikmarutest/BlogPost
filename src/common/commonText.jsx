@@ -117,6 +117,7 @@ export const footerText = {
 export const loginText = {
   signIn: "Log In ",
   signUp: "Don't have any account? ",
+  forgotPwd: "Forgot Password?",
 };
 
 export const postCard = {
@@ -152,4 +153,10 @@ export const reviewText = {
   userStatus: `User of "${common.orgName}"`,
 };
 
+export const forgotPwdText = {
+  passwordTitle: "Reset Password",
+  passwordDescription: "* We'll share reset link with you on your mail address",
+  resetBtn: "Send reset link",
+  backToLogin: "Back to login",
+};
 export default common;
