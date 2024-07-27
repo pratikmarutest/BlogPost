@@ -37,6 +37,8 @@ const ResetPwd = () => {
     setSnackbarDisplay(true);
 
     setTimeout(() => {
+      setSnackbarMessage(res);
+      setSnackbarDisplay(true);
       navigate("/login");
     }, 3000);
   };
