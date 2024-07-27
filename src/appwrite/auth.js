@@ -20,6 +20,7 @@ export class AuthService {
         password,
         name,
       );
+
       if (userAccount) return this.login({ email, password });
     } catch (error) {
       throw error;
@@ -50,6 +51,23 @@ export class AuthService {
       await this.account.deleteSessions();
     } catch (error) {
       console.log("Appwrite service :: logout :: error ", error);
+    }
+  }
+
+  async sendMail(url) {
+    try {
+      await this.account.createVerification(`${url}/verify`);
+    } catch (error) {
+      console.log("Appwrite Error :- ", error);
+    }
+  }
+
+  async verifyAccount(id, secret) {
+    try {
+      const verify = await this.account.updateVerification(id, secret);
+      return "User is verified";
+    } catch (error) {
+      alert(error);
     }
   }
 }

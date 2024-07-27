@@ -36,7 +36,7 @@ export const reviewArray = [
       "Platform lists best earning opportunities and offers. I have earned pocket money and also saved money using offers listed by this platform.",
   },
   {
-    userName: "Forum shah",
+    userName: "Foram shah",
     userReview:
       "Amazing site. Already saved good amount of money using this platform and also earned decent money by filling surveys on platforms listed by this site. ",
   },

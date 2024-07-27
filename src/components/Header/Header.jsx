@@ -51,26 +51,26 @@ const Header = () => {
     },
   ];
 
-  // useEffect(async () => {
-  //   let userId;
-  //   if (userData) {
-  //     userId = await userData.$id;
-  //   }
-  //   await appwriteService
-  //     .checkAddAccess(userId)
-  //     .then((value) => setAdmin(value));
-  // }, [userData]);
-
-  useEffect(() => {
-    const checkAdmin = async () => {
-      const userId = await userData.$id;
-      appwriteService
-        .checkAddAccess(userId)
-        .then((res) => res)
-        .then((value) => setAdmin(value));
-    };
-    checkAdmin();
+  useEffect(async () => {
+    let userId;
+    if (userData) {
+      userId = await userData.$id;
+    }
+    await appwriteService
+      .checkAddAccess(userId)
+      .then((value) => setAdmin(value));
   }, [userData]);
+
+  // useEffect(() => {
+  //   const checkAdmin = async () => {
+  //     const userId = await userData.$id;
+  //     appwriteService
+  //       .checkAddAccess(userId)
+  //       .then((res) => res)
+  //       .then((value) => setAdmin(value));
+  //   };
+  //   checkAdmin();
+  // }, [userData]);
 
   const fetchQueries = () => {
     appwriteService

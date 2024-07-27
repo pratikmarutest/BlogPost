@@ -2,14 +2,18 @@ import React, { useState } from "react";
 import authService from "../../appwrite/auth";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "../../store/authSlice";
-import { Button, Input, Loader } from "../index";
+import { Button, Input, Loader, SnackBar } from "../index";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import common, { SignUpFormText } from "../../common/commonText";
 
 function Signup() {
   const navigate = useNavigate();
+  const [snackBarMessage, setSnackBarMessage] = useState("");
+  const [snackBarDisplay, setSnackBarDisplay] = useState(false);
   const [error, setError] = useState("");
+  const url = `${window.location.protocol}//${window.location.host}`;
+
   const dispatch = useDispatch();
   const {
     register,
@@ -22,11 +26,21 @@ function Signup() {
     setError("");
     setLoading(true);
     try {
-      const userData = await authService.createAccount(data);
+      const userData = await authService.createAccount(data).then((res) => {
+        setSnackBarMessage("Verification mail sent");
+        setSnackBarDisplay(true);
+        setTimeout(() => {
+          setSnackBarDisplay(false);
+          navigate("/");
+        }, 2000);
+        return res;
+      });
       if (userData) {
-        const userData = await authService.getCurrentUser();
-        if (userData) dispatch(login(userData));
-        navigate("/");
+        const userUpdatedData = await authService.getCurrentUser();
+        if (userUpdatedData) {
+          await authService.sendMail(url);
+          dispatch(login(userData));
+        }
       }
     } catch (error) {
       setError(error.message);
@@ -78,7 +92,9 @@ function Signup() {
                 {SignUpFormText.passwordError}
               </p>
             ) : null}
-
+            <div className="text-xs text-white opacity-40">
+              {SignUpFormText.mailVerifyText}
+            </div>
             <Button type="submit" className="w-full">
               {loading ? <Loader /> : "Create Account"}
             </Button>
@@ -93,6 +109,9 @@ function Signup() {
             {common.login}
           </Link>
         </div>
+        {snackBarDisplay && (
+          <SnackBar message={snackBarMessage} display="success" />
+        )}
       </div>
     </div>
   );

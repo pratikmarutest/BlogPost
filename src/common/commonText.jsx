@@ -44,6 +44,7 @@ export const SignUpFormText = {
   alreadyAccount: "Already have an account? ",
   passwordError:
     "Password must be at least 8 characters long, must contain one uppercase letter, one lowercase letter, one number, and one special character.",
+  mailVerifyText: "* You'll receive verification mail from appwrite",
 };
 
 export const homeText = {
@@ -155,8 +156,17 @@ export const reviewText = {
 
 export const forgotPwdText = {
   passwordTitle: "Reset Password",
-  passwordDescription: "* We'll share reset link with you on your mail address",
+  passwordDescription: "* You'll receive reset password mail from appwrite",
   resetBtn: "Send reset link",
   backToLogin: "Back to login",
 };
+
+export const verifyAccountText = {
+  verifyTitle: "Verify Account",
+  verifyDescription: "Please verify your account to continue",
+  verifyBtn: "Verify",
+  backToLogin: "Back to login",
+  verified: "Verification Successfull",
+};
+
 export default common;
