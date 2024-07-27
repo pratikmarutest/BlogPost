@@ -1,13 +1,29 @@
-import { Button, Input } from "../../components/index";
+import { Button, Input, SnackBar } from "../../components/index";
 import { Link, useNavigate } from "react-router-dom";
 import { forgotPwdText } from "../../common/commonText";
+import { useRef, useState } from "react";
+import authService from "../../appwrite/auth";
 
 const ForgotPwd = () => {
   const navigate = useNavigate();
-
-  const handleSubmit = (event) => {
+  const [snackbarDiplay, setSnackbarDiplay] = useState(false);
+  const [snackBarMessage, setSnackBarMessage] = useState("");
+  const emailInputRef = useRef(null);
+  const url = `${window.location.protocol}//${window.location.hostname}/reset-password`;
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    navigate("/login");
+    const res = await authService.forgotPassword(
+      emailInputRef.current.value,
+      url,
+    );
+    setSnackBarMessage(res);
+    setSnackbarDiplay(true);
+
+    setTimeout(() => {
+      setSnackbarDiplay(false);
+      setSnackBarMessage("");
+      navigate("/login");
+    }, 2000);
   };
 
   return (
@@ -27,6 +43,8 @@ const ForgotPwd = () => {
                   label="Email: "
                   placeholder="Enter your email"
                   type="email"
+                  required
+                  ref={emailInputRef}
                 />
                 <p className="text-xs text-gray-500 mt-1">
                   {forgotPwdText.passwordDescription}
@@ -39,11 +57,14 @@ const ForgotPwd = () => {
             <div className="text-center text-xs mt-3">
               <Link
                 to="/login"
-                className="font-medium text-blue-400 text-primary transition-all duration-200 hover:underline"
+                className="font-bold text-blue-400 text-md text-primary transition-all duration-200 hover:underline"
               >
                 {forgotPwdText.backToLogin}
               </Link>
             </div>
+            {snackbarDiplay && (
+              <SnackBar message={snackBarMessage} display="success" />
+            )}
           </div>
         </div>
       </section>

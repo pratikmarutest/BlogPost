@@ -4,7 +4,7 @@ import App from "./App";
 import { Provider } from "react-redux";
 import store from "./store/store";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { Protected, Login, ForgotPwd } from "./components";
+import { Protected, Login, ForgotPwd, ResetPwd } from "./components";
 import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import AllPosts from "./pages/AllPosts";
@@ -51,6 +51,10 @@ const router = createBrowserRouter([
 			{
 				path: "/verify",
 				element: <Verify />,
+			},
+			{
+				path: "/reset-password",
+				element: <ResetPwd />,
 			},
 			{
 				path: "/all-posts",

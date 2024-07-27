@@ -30,6 +30,7 @@ import Review from "../components/Review/Review";
 import HeroTimeline from "../components/HeroTimeline/HeroTimeline";
 import ForgotPwd from "./ForgotPwd/ForgotPwd";
 import VerifyAccount from "./VerifyAccount/VerifyAccount";
+import ResetPwd from "./ResetPwd/ResetPwd";
 
 export {
   Header,
@@ -64,4 +65,5 @@ export {
   HeroTimeline,
   ForgotPwd,
   VerifyAccount,
+  ResetPwd,
 };

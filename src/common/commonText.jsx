@@ -169,4 +169,14 @@ export const verifyAccountText = {
   verified: "Verification Successfull",
 };
 
+export const resetPwdText = {
+  resetPassword: "Reset Password",
+  enterNewPassword: "Enter new password",
+  repeatPassword: "Re-Enter New Password",
+  resetPasswordBtn: "Reset Password",
+  passwordError:
+    "Password must be at least 8 characters long, must contain one uppercase letter, one lowercase letter, one number, and one special character.",
+  passwordMismatch: "Passwords does not match",
+};
+
 export default common;
