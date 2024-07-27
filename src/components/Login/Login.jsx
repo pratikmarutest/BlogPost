@@ -63,7 +63,7 @@ function Login() {
               })}
             />
             <Button type="submit" className="w-full">
-              {loading ? <Loader /> : "Sign in"}
+              {loading ? <Loader /> : common.signIn}
             </Button>
           </div>
         </form>

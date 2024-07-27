@@ -8,6 +8,7 @@ export const common = {
   submit: "Submit",
   edit: "Edit",
   signup: "Sign Up",
+  signIn: "Sign In",
   crossSign: "❌",
   tickSign: "✔",
   viewingWarning: "For better viewing experience rotate left.",
@@ -171,12 +172,13 @@ export const verifyAccountText = {
 
 export const resetPwdText = {
   resetPassword: "Reset Password",
-  enterNewPassword: "Enter new password",
+  enterNewPassword: "Enter New password",
   repeatPassword: "Re-Enter New Password",
   resetPasswordBtn: "Reset Password",
   passwordError:
     "Password must be at least 8 characters long, must contain one uppercase letter, one lowercase letter, one number, and one special character.",
   passwordMismatch: "Passwords does not match",
+  backToLogin: "Back to login",
 };
 
 export default common;

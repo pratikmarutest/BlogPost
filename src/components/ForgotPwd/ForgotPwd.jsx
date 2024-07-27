@@ -1,4 +1,4 @@
-import { Button, Input, SnackBar } from "../../components/index";
+import { Button, Input, SnackBar, Loader } from "../../components/index";
 import { Link, useNavigate } from "react-router-dom";
 import { forgotPwdText } from "../../common/commonText";
 import { useRef, useState } from "react";
@@ -10,12 +10,16 @@ const ForgotPwd = () => {
   const [snackBarMessage, setSnackBarMessage] = useState("");
   const emailInputRef = useRef(null);
   const url = `${window.location.protocol}//${window.location.hostname}/reset-password`;
+  const [loading, setLoading] = useState(false);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setLoading(true);
     const res = await authService.forgotPassword(
       emailInputRef.current.value,
       url,
     );
+    setLoading(false);
     setSnackBarMessage(res);
     setSnackbarDiplay(true);
 
@@ -51,7 +55,7 @@ const ForgotPwd = () => {
                 </p>
               </div>
               <Button type="submit" className="w-full">
-                {forgotPwdText.resetBtn}
+                {loading ? <Loader /> : forgotPwdText.resetBtn}
               </Button>
             </form>
             <div className="text-center text-xs mt-3">
