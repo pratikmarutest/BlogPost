@@ -1,4 +1,4 @@
-import orgLogo from "./orgLogo.jpeg";
+import orgLogo from "./orgLogo.png";
 import replyIcon from "./replyIcon.svg";
 import viewIcon from "./viewIcon.svg";
 import deleteIcon from "./deleteIcon.svg";

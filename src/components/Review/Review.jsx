@@ -84,7 +84,7 @@ const Review = () => {
         {reviewArray.map((_, index) => (
           <span
             key={index}
-            className={`h-2 w-2 rounded-full ${currentIndex === index ? "bg-blue-600" : "bg-gray-400"}`}
+            className={`h-2 w-2 rounded-full ${currentIndex === index ? "bg-blue-500" : "bg-gray-400"}`}
           ></span>
         ))}
       </div>
