@@ -15,7 +15,7 @@ const PostCard = ({
   return (
     <Link to={`/post/${$id}`}>
       <div className="max-w-sm border border-gray-300 rounded-lg shadow-xl bg-gray-800 border-white border-opacity-30 h-96 relative">
-        <div className="bg-black rounded-t-lg bg-opacity-30">
+        <div className="bg-black rounded-t-lg bg-opacity-30 p-2">
           <img
             className="object-contain w-full h-40"
             src={appwriteService.getFilePreview(featuredImage)}
