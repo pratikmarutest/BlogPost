@@ -13,7 +13,7 @@ const About = () => {
     <div className="font-sans">
       <div class="container mx-auto px-4 py-8">
         <h1 class="text-3xl font-bold text-gray-200 text-center mb-8">
-          About {common.orgName}
+          About Us
         </h1>
         <Container>
           <div className="overflow-y-auto h-96 text-white rounded-lg shadow-md pr-2">
