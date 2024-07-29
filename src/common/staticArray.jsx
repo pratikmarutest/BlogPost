@@ -7,12 +7,7 @@ export const messageRow = ["Resolved", "Name", "Email", "Message", "Actions"];
 
 export const messageFilters = ["All", "Resolved", "Pending"];
 
-export const footerTextArray = [
-  "About",
-  "Privacy Policy",
-  "Licensing",
-  "Contact",
-];
+export const footerTextArray = ["About", "Privacy Policy", "Contact"];
 
 export const socialMediaLinks = [
   {

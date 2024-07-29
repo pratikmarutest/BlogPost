@@ -14,6 +14,8 @@ import Post from "./pages/Post";
 import Contact from "./pages/Contact";
 import FAQs from "./pages/FAQs";
 import Verify from "./pages/Verify";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import About from "./pages/About";
 
 const router = createBrowserRouter([
 	{
@@ -83,6 +85,8 @@ const router = createBrowserRouter([
 			{ path: "/post/:slug", element: <Post /> },
 			{ path: "/contact", element: <Contact /> },
 			{ path: "/faqs", element: <FAQs /> },
+			{ path: "/privacy-policy", element: <PrivacyPolicy /> },
+			{ path: "/about", element: <About /> },
 		],
 	},
 ]);

@@ -1,5 +1,6 @@
 export const common = {
   orgName: "EarnQuest",
+  orgEmail: "support@earnquest.in",
   headline: "Headline 1",
   logout: "Logout",
   login: "Login",
@@ -12,6 +13,7 @@ export const common = {
   crossSign: "❌",
   tickSign: "✔",
   viewingWarning: "For better viewing experience rotate left.",
+  clickMe: "Click Me",
 };
 
 export const LoginFormText = {
