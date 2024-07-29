@@ -15,11 +15,13 @@ const PostCard = ({
   return (
     <Link to={`/post/${$id}`}>
       <div className="max-w-sm border border-gray-300 rounded-lg shadow-xl bg-gray-800 border-white border-opacity-30 h-96 relative">
-        <img
-          className="object-cover w-full h-40 rounded-t-lg"
-          src={appwriteService.getFilePreview(featuredImage)}
-          alt={title}
-        />
+        <div className="bg-black rounded-t-lg bg-opacity-30">
+          <img
+            className="object-contain w-full h-40"
+            src={appwriteService.getFilePreview(featuredImage)}
+            alt={title}
+          />
+        </div>
 
         <div className="px-3 py-3">
           <h5 className="mb-1 text-xl font-bold tracking-tight text-white">
