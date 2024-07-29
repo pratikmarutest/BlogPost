@@ -131,9 +131,10 @@ export const postText = {
 };
 
 export const socialMediaLink = {
-  whatsappLink: "https://www.google1.com",
-  telegramLink: "https://www.google2.com",
-  instagramLink: "https://www.google3.com",
+  whatsappLink: "https://whatsapp.com/channel/0029VafylHXCMY0GNRAjWc3y",
+  telegramLink: "https://t.me/earn_quest",
+  instagramLink:
+    "https://www.instagram.com/earnquest.in?utm_source=qr&igsh=MXdpZGt3bzRub2ZnZw==",
 };
 
 export const shareButtonText = {
