@@ -1,0 +1,42 @@
+/* styles.module.css */
+
+/* Existing styles for other elements */
+.content-container h1 {
+  @apply text-3xl font-bold my-4;
+}
+.content-container h2 {
+  @apply text-2xl font-semibold my-3;
+}
+.content-container p {
+  @apply my-2;
+}
+.content-container ul {
+  @apply list-disc pl-5 my-2;
+}
+.content-container li {
+  @apply my-1;
+}
+
+/* New styles for ordered lists */
+.content-container ol {
+  @apply list-decimal pl-5 my-2; /* Apply Tailwind styles for default numbering */
+}
+
+.content-container ol.custom-numbered-list {
+  list-style-type: none; /* Remove default numbering */
+  padding-left: 0; /* Remove default padding */
+}
+
+.content-container ol.custom-numbered-list li {
+  position: relative; /* Create space for custom numbers */
+  padding-left: 2rem; /* Adjust padding to fit custom numbers */
+}
+
+.content-container ol.custom-numbered-list li::before {
+  content: counter(list-item) ". "; /* Use CSS counters for custom numbering */
+  position: absolute;
+  left: 0; /* Position number */
+  color: #10b981; /* Number color */
+  font-size: 1.25rem; /* Number size */
+  font-weight: bold; /* Number weight */
+}

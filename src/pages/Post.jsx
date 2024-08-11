@@ -14,6 +14,7 @@ import parse from "html-react-parser";
 import { useSelector } from "react-redux";
 import { postText } from "../common/commonText";
 import { deleteIcon, editIcon } from "../assets/index";
+import styles from "../syles/styles.module.css";
 
 export default function Post() {
   const [post, setPost] = useState(null);
@@ -83,7 +84,9 @@ export default function Post() {
           </div>
           <div className="w-full md:w-1/2 xl:w-2/3 p-4">
             <div className="overflow-y-auto h-96 p-4 bg-white bg-opacity-20 text-white rounded-lg shadow-md ">
-              <div className="browser-css">{parse(post.content)}</div>
+              <div className={`${styles["content-container"]}`}>
+                {parse(post.content)}
+              </div>
             </div>
           </div>
         </div>
