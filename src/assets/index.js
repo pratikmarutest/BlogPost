@@ -9,6 +9,7 @@ import whatsappIcon from "./whatsappIcon.svg";
 import instagramIcon from "./instagramIcon.svg";
 import editIcon from "./editIcon.svg";
 import shareIcon from "./shareIcon.svg";
+import heroImg from "./heroImg.png";
 
 export {
   orgLogo,
@@ -22,4 +23,5 @@ export {
   instagramIcon,
   editIcon,
   shareIcon,
+  heroImg,
 };

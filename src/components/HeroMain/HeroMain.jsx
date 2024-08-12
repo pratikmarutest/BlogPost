@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import common, { heroMainText } from "../../common/commonText";
 import { Button } from "../index";
+import { heroImg } from "../../assets/index";
 
 const HeroMain = () => {
   return (
@@ -29,7 +30,7 @@ const HeroMain = () => {
 
       <Link
         to="/contact"
-        class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-24 text-sm  rounded-full bg-gray-800 text-white hover:bg-gray-700"
+        class="inline-flex justify-between items-center py-1 px-1 pr-4 text-sm  rounded-full bg-gray-800 text-white hover:bg-gray-700"
         role="alert"
       >
         <span class="text-xs bg-gradient-to-br from-purple-600 to-blue-500 rounded-full text-white px-4 py-1.5 mr-3">
@@ -51,6 +52,11 @@ const HeroMain = () => {
           ></path>
         </svg>
       </Link>
+      <img
+        src={heroImg}
+        alt="Hero"
+        className="max-w-full h-auto mx-auto rounded-lg md:max-w-2xl"
+      />
     </div>
   );
 };
