@@ -6,7 +6,7 @@ import { heroImg } from "../../assets/index";
 const HeroMain = () => {
   return (
     <div className="text-center">
-      <h1 class="mb-4 text-3xl font-bold tracking-tight leading-none md:text-5xl lg:text-6xl text-white mt-12 text-center">
+      <h1 class="mb-4 text-3xl font-bold tracking-tight leading-none md:text-5xl lg:text-6xl text-white mt-8 text-center">
         {heroMainText.mainHeading}
       </h1>
       <p class="mb-8 text-sm font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 text-gray-400 text-center">
