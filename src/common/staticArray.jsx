@@ -26,7 +26,7 @@ export const socialMediaLinks = [
 
 export const reviewArray = [
   {
-    userName: "Pratik Maru",
+    userName: "Reva Joshi",
     userReview:
       "Platform lists best earning opportunities and offers. I have earned pocket money and also saved money using offers listed by this platform.",
   },
